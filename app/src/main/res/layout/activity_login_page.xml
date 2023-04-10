@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login_page">
+
+    <ImageView
+        android:layout_width="198dp"
+        android:layout_height="178dp"
+        android:src="@drawable/logo3"
+        tools:ignore="contentDescriptio"
+        android:transitionName="image">
+
+    </ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:text="Retailer Segment"
+            android:textColor="@color/black"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:text="Sign in to continue"
+            android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+           >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="EMAIL"
+                android:id="@+id/login_username"
+                android:layout_margin="3dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:passwordToggleEnabled="true">
+             <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login_password"
+                android:inputType="textPassword"
+                android:hint="PASSWORD">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password"
+            android:background="#0000"
+            android:textColor="@color/black"
+            android:padding="2dp"
+            android:id="@+id/login_forgot_btn"
+            android:layout_marginLeft="240dp"/>
+
+        <Button
+            android:id="@+id/login_signin_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:backgroundTint="#2F2E30"
+            android:textColor="@color/white"
+            android:padding="2dp"
+            android:layout_margin="5dp"
+            >
+
+        </Button>
+        <Button
+            android:id="@+id/login_signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dont have account?Create one."
+            android:background="#0000"
+            android:textColor="@color/black"
+            android:padding="2dp"
+            android:layout_margin="5dp"
+            >
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
