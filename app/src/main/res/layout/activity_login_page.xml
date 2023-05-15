@@ -36,9 +36,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-           >
+            android:padding="5dp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
             app:passwordToggleEnabled="true">
              <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

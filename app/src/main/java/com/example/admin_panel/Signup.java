@@ -36,7 +36,6 @@ public class Signup extends AppCompatActivity {
         db=FirebaseFirestore.getInstance();
         auth=FirebaseAuth.getInstance();
         signup_email=findViewById(R.id.signup_email);
-
         signup_phone=findViewById(R.id.signup_phone);
         signup_name=findViewById(R.id.signup_name);
         signup_password=findViewById(R.id.signup_password);
@@ -67,7 +66,7 @@ public class Signup extends AppCompatActivity {
         Map<String, Object> user = new HashMap<>();
         user.put("email", signup_email.getText().toString());
         user.put("name", signup_name.getText().toString());
-        user.put("phone", signup_phone.getText().toString());db.collection("students").document(signup_email.getText().toString()).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+        user.put("phone", signup_phone.getText().toString());db.collection("shopkeeper").document(signup_email.getText().toString()).set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
                 Toast.makeText(Signup.this, "USER REGISTERED", Toast.LENGTH_SHORT).show();
@@ -112,7 +111,7 @@ public class Signup extends AppCompatActivity {
 
                                 }
                                 else {
-                                    Toast.makeText(Signup.this, "error"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Signup.this, "Error failure" +task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

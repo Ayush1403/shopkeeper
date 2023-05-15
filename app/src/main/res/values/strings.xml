@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">admin_panel</string>
+    <string name="app_name">forShopkeeper</string>
+    <string-array name="category">
+
+        <item name="pen">PEN</item>
+        <item name="copy">COPY</item>
+        <item name="register">REGISTER</item>
+        <item name="paper">PAPER</item>
+        <item name="manual">MANUAL</item>
+        <item name="other">OTHER</item>
+    </string-array>
 </resources>

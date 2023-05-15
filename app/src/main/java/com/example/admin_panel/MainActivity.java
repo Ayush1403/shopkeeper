@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
           new Handler().postDelayed(new Runnable() {
 @Override
 public void run() {
-    Intent intent = new Intent(MainActivity.this, com.example.admin_panel.login_page.class);
-
-    Pair[] pairs = new Pair[1];
-    pairs[0] = new Pair<View,String>(img,"image");
-    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs[0]);
-    startActivity(intent,options.toBundle());
+    Intent intent = new Intent(MainActivity.this,login_page.class);
+    startActivity(intent);
+//    Pair[] pairs = new Pair[1];
+//    pairs[0] = new Pair<View,String>(img,"image");
+//    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,pairs[0]);
+//    startActivity(intent,options.toBundle());
 
 }
 
