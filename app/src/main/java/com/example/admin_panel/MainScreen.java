@@ -1,5 +1,6 @@
 package com.example.admin_panel;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainScreen extends AppCompatActivity {
-    private Button product_upload;
+    private Button product_upload,myorder;
     private EditText about,amount,link,name;
     Spinner category;
     FirebaseDatabase database;
@@ -35,7 +36,7 @@ public class MainScreen extends AppCompatActivity {
         //Shared prefrence
         SharedPreferences sp=getSharedPreferences("myshopkeeper",MODE_PRIVATE);
         userid=sp.getString("username", "na");
-
+        myorder=findViewById(R.id.Myorder_button);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("PRODUCT");
         product_upload=findViewById(R.id.upload_button);
@@ -44,7 +45,14 @@ public class MainScreen extends AppCompatActivity {
         link=findViewById(R.id.product_image_link);
         name=findViewById(R.id.product_name);
         category=findViewById(R.id.product_category);
+        myorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainScreen.this,myoreder.class);
+                startActivity(intent);
 
+            }
+        });
 
         product_upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,4 +91,6 @@ public class MainScreen extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.bottom,menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+
 }

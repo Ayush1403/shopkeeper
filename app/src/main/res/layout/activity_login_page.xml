@@ -8,8 +8,10 @@
     tools:context=".login_page">
 
     <ImageView
+        android:layout_marginTop="20dp"
         android:layout_width="198dp"
         android:layout_height="178dp"
+        android:layout_gravity="center"
         android:src="@drawable/logo3"
         tools:ignore="contentDescriptio"
         android:transitionName="image">
